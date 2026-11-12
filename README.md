@@ -4,7 +4,8 @@
 
 A ticket triage system for renewable-energy O&M. It reads a free-text maintenance ticket and returns its **category, severity, probable root cause, next actions, owning team, priority and SLA**, with a step-by-step trace that explains every decision.
 
-- **Live app:** `<RAILWAY_URL>` (UI at `/`, API docs at `/docs`)
+- **Live app (Railway):** https://triage-app-production-835d06d1.up.railway.app (UI at `/`, API docs at [`/docs`](https://triage-app-production-835d06d1.up.railway.app/docs), health at [`/api/health`](https://triage-app-production-835d06d1.up.railway.app/api/health))
+- **Demo links:** [critical gearbox ticket](https://triage-app-production-835d06d1.up.railway.app/?ticket=T002) · [low-confidence ticket flagged for review](https://triage-app-production-835d06d1.up.railway.app/?ticket=H016) · [priority queue](https://triage-app-production-835d06d1.up.railway.app/#queue) · [evaluation](https://triage-app-production-835d06d1.up.railway.app/#eval)
 - **Stack:** Python · scikit-learn · FastAPI · HTML/CSS/JS · optional Claude LLM summary · Railway
 
 ![Triage result](docs/screenshots/triage_T002.png)
