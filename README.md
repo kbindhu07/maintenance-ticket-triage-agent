@@ -194,6 +194,17 @@ Optional LLM summary: `export ANTHROPIC_API_KEY=...` before starting (see `.env.
 
 Demo shortcuts: `/?ticket=T002` (critical gearbox), `/?ticket=H016` (low confidence → human review), `/#queue`, `/#eval`.
 
+### Screenshots and demo notes
+
+| Screen | What it shows |
+|---|---|
+| [Triage: T002](docs/screenshots/triage_T002.png) | Critical gearbox ticket → P1, Wind Mechanical O&M, 1 h SLA, severity reasons, root causes, 9-step agent trace |
+| [Triage: H016](docs/screenshots/triage_H016_review.png) | Low-confidence ticket (0.23): rules second opinion tried, **flagged for human review** |
+| [Priority queue](docs/screenshots/queue.png) | 42 sample tickets sorted P1 first, compared with true labels |
+| [Evaluation](docs/screenshots/evaluation.png) | Metrics, baselines, confusion matrix, error list |
+
+Demo sequence: (1) open T002 → explain severity reasons and trace; (2) type a new ticket such as *"Smoke coming from combiner box in block 4"* → safety_hazard, critical, HSE escalation, asset type inferred as solar; (3) open H016 → failure case caught by the review flag; (4) Priority queue tab; (5) Evaluation tab; (6) `/docs` to show the REST API.
+
 ## 9. Deploy to Railway
 
 1. Push this repo to GitHub.
