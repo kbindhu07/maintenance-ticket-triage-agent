@@ -1,0 +1,37 @@
+ticket_id,asset_type,description,target_severity,target_category
+H001,solar,"Central inverter INV-22 keeps going into fault every day between 12 and 2, heatsink reading 85C",high,inverter_thermal
+H002,solar,PCU-3 output limited to 70% - thermal derate message on HMI,high,inverter_thermal
+H003,solar,"inverter 9 fans making noise, temp slightly above normal but no trip yet",medium,inverter_thermal
+H004,solar,String inverters across the whole plant shutting down on overtemperature since 11 am,critical,inverter_thermal
+H005,wind,WTG-33 CMS shows sideband peaks on planetary stage; noise heard from nacelle,critical,gearbox_vibration
+H006,wind,"Turbine 18 stopped on 'gearbox bearing temp high', vibration also above warning",critical,gearbox_vibration
+H007,wind,Drivetrain vibration on WTG-05 slightly up compared to last month; keep under observation,medium,gearbox_vibration
+H008,wind,Oil sample from WTG-41 gearbox shows high iron content,critical,gearbox_vibration
+H009,hydro,Monthly dam safety inspection for gate 2 not done this month,medium,inspection_compliance
+H010,solar,"Thermography audit of block 7 overdue, contractor not mobilised",medium,inspection_compliance
+H011,wind,Lift certificate for WTG-12 tower elevator expired yesterday,high,inspection_compliance
+H012,grid,Prepare documents for routine annual substation audit next month,low,inspection_compliance
+H013,solar,Block 2 generation values stuck at same number on the dashboard since 9 am,medium,data_gap
+H014,wind,Lost connection to 6 turbines on the SCADA screen; fibre cut suspected near pooling station,high,data_gap
+H015,hydro,Unit 2 RTU not reporting; local panel shows machine running normally,medium,data_gap
+H016,solar,Weather station irradiance sensor not sending readings,medium,data_gap
+H017,wind,WTG-27 stopped with blade 3 angle mismatch alarm,high,pitch_system
+H018,wind,Emergency pitch battery test failed on WTG-09,critical,pitch_system
+H019,wind,Pitch drive fault on WTG-14 auto-reset three times tonight,high,pitch_system
+H020,wind,After cyclone warning turbines feathered; WTG-30 blade not reaching 90 degrees,critical,pitch_system
+H021,grid,SLDC asked to reduce to 50 MW at 14:00 but plant export still at 80 MW,high,grid_curtailment
+H022,solar,Backdown hours from last week missing in the monthly generation report,medium,grid_curtailment
+H023,grid,Grid desk says curtailment lifted but PPC still holding plant at 60%,medium,grid_curtailment
+H024,wind,Dispatch revision not received from grid operator for evening slot,medium,grid_curtailment
+H025,grid,Gas collected in Buchholz relay of 220 kV power transformer,critical,transformer_fault
+H026,grid,33 kV breaker for feeder 4 tripped on overcurrent and will not reclose,high,transformer_fault
+H027,solar,IDT-5 winding temperature crossing alarm limit in afternoon,high,transformer_fault
+H028,grid,Oil seepage seen at transformer T3 radiator valve,high,transformer_fault
+H029,solar,Cable insulation melted in combiner box and smoke coming out,critical,safety_hazard
+H030,hydro,Worker slipped near spillway gate and hurt his leg,critical,safety_hazard
+H031,wind,Loose ladder bracket found inside tower of WTG-21 - unsafe to climb,critical,safety_hazard
+H032,grid,Short circuit flash in switchyard during switching operation,critical,safety_hazard
+H033,solar,PR of block 6 is 3% lower than block 5 after two weeks without washing,low,module_soiling
+H034,solar,Thick dust layer on panels after sandstorm; plant output down noticeably,medium,module_soiling
+H035,solar,Grass grown tall near rows 20-25 shading bottom modules,low,module_soiling
+H036,solar,Bird nesting on module rows creating droppings on block 11,low,module_soiling

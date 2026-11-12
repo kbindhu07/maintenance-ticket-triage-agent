@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ticket Triage Agent</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--ink:#16202c;--muted:#5b6776;--line:#e2e6eb;--brand:#12372a;--brand2:#1f6f4a;
+--crit:#b42318;--high:#c4560c;--med:#a27b00;--low:#2f6f3e;--chip:#eef2f5}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
+header{background:var(--brand);color:#fff;padding:18px 24px}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;opacity:.85;font-size:13px}
+nav{display:flex;gap:4px;padding:0 24px;background:var(--brand);overflow-x:auto}
+nav button{background:none;border:0;color:#cfe3d8;padding:10px 14px;font:inherit;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav button.on{color:#fff;border-color:#7fd1a5;font-weight:600}
+main{max-width:1150px;margin:0 auto;padding:20px 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+h2{font-size:16px;margin:0 0 12px}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:16px 0 6px}
+textarea{width:100%;min-height:110px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;resize:vertical}
+select{padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.btn{background:var(--brand2);color:#fff;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.6;cursor:wait}
+.ghost{background:var(--chip);color:var(--ink);font-weight:500}
+.samples{display:flex;flex-direction:column;gap:6px;max-height:330px;overflow:auto;margin-top:6px}
+.sample{text-align:left;background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font:inherit;font-size:13px}
+.sample:hover{border-color:var(--brand2)}
+.sample b{color:var(--muted);font-weight:600;margin-right:6px}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.badge{border-radius:999px;padding:4px 12px;font-weight:600;font-size:13px;background:var(--chip)}
+.sev-critical{background:var(--crit);color:#fff}.sev-high{background:var(--high);color:#fff}
+.sev-medium{background:var(--med);color:#fff}.sev-low{background:var(--low);color:#fff}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 12px;font-size:14px}
+.kv div:nth-child(odd){color:var(--muted)}
+.bar{height:8px;background:var(--chip);border-radius:4px;overflow:hidden;width:160px;display:inline-block;vertical-align:middle;margin-right:8px}
+.bar i{display:block;height:100%;background:var(--brand2)}
+.summary{background:#f0f7f3;border-left:4px solid var(--brand2);padding:10px 12px;border-radius:6px}
+.src{font-size:12px;color:var(--muted);margin-top:4px}
+.warn{background:#fff4e5;border-left:4px solid var(--high);padding:8px 12px;border-radius:6px;margin-top:10px;font-size:14px}
+ol,ul{margin:4px 0;padding-left:20px}
+li{margin:3px 0}
+.trace{border-left:2px solid var(--line);margin-left:6px;padding-left:14px}
+.step{margin:0 0 10px;position:relative}
+.step:before{content:"";position:absolute;left:-20px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--brand2)}
+.step code{background:var(--chip);padding:1px 6px;border-radius:4px;font-size:13px}
+.step .d{color:var(--muted);font-size:13px}
+details summary{cursor:pointer;color:var(--muted);font-size:12px}
+pre{background:#0f172a;color:#e5e7eb;padding:10px;border-radius:8px;overflow:auto;font-size:12px;max-height:260px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;background:#fafbfc}
+.tablewrap{overflow-x:auto}
+.ok{color:var(--low);font-weight:600}.bad{color:var(--crit);font-weight:600}
+.muted{color:var(--muted)}
+.hidden{display:none}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px}
+.flow span{background:var(--chip);padding:6px 10px;border-radius:6px}
+.flow em{color:var(--muted);font-style:normal}
+.cm td{text-align:center}.cm td.diag{background:#e3f3e8;font-weight:700}.cm td.off{background:#fde8e6;font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Maintenance Ticket Triage Agent</h1>
+  <p>Classifies, prioritises and routes O&amp;M tickets for solar, wind, hydro and grid assets: NLP classifier + rule/tool-based agent</p>
+</header>
+<nav>
+  <button class="on" data-tab="triage">Triage a ticket</button>
+  <button data-tab="queue">Priority queue</button>
+  <button data-tab="eval">Evaluation</button>
+  <button data-tab="how">How it works</button>
+</nav>
+<main>
+
+<section id="tab-triage">
+  <div class="grid">
+    <div>
+      <div class="card">
+        <h2>1. Enter a ticket</h2>
+        <textarea id="text" placeholder="e.g. Gearbox vibration has increased for turbine WTG-12 with abnormal noise"></textarea>
+        <div class="row">
+          <label class="muted" for="asset">Asset type</label>
+          <select id="asset"><option value="">auto-detect</option><option>solar</option><option>wind</option><option>hydro</option><option>grid</option></select>
+          <button class="btn" id="go">Triage ticket</button>
+        </div>
+        <h3>Sample tickets (bundled T001-T006 + hand-written holdout)</h3>
+        <div class="samples" id="samples"><span class="muted">Loading...</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="card" id="result"><h2>2. Triage result</h2><p class="muted">Pick a sample or type a ticket, then press <b>Triage ticket</b>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tab-queue" class="hidden">
+  <div class="card">
+    <h2>Prioritised work queue</h2>
+    <p class="muted">All 42 sample tickets triaged by the agent and sorted by severity, then human-review flag, then confidence. The "Label" columns show the ground-truth labels so you can see where the agent agrees.</p>
+    <div class="tablewrap"><table id="queue"><tr><td class="muted">Loading...</td></tr></table></div>
+  </div>
+</section>
+
+<section id="tab-eval" class="hidden">
+  <div class="card" id="eval"><span class="muted">Loading metrics...</span></div>
+</section>
+
+<section id="tab-how" class="hidden">
+  <div class="card">
+    <h2>Pipeline</h2>
+    <div class="flow">
+      <span>Ticket text + asset type</span><em>→</em><span>Clean text, extract asset IDs</span><em>→</em>
+      <span>TF-IDF + Logistic Regression → category + confidence</span><em>→</em>
+      <span>Low confidence? → keyword rules second opinion</span><em>→</em>
+      <span>Rule-based severity (+ ML can only raise it)</span><em>→</em>
+      <span>Root cause lookup + similar tickets</span><em>→</em>
+      <span>Route: team, priority, SLA, actions</span><em>→</em>
+      <span>Critical → escalation</span><em>→</em><span>Summary (LLM optional, template fallback)</span>
+    </div>
+    <h3>What is ML, what is rules, what is GenAI</h3>
+    <ul>
+      <li><b>ML:</b> category classifier (TF-IDF word + character n-grams, Logistic Regression) and a secondary severity model used only to raise severity.</li>
+      <li><b>Rules / tools:</b> severity scoring, asset-consistency check, root-cause ranking, routing, SLA, escalation. These are deterministic and auditable.</li>
+      <li><b>GenAI (optional):</b> writes a 2-3 sentence operator summary from the already-computed facts. It never decides category, severity or routing. Without an API key a template summary is used.</li>
+      <li><b>Agent:</b> a deterministic tool-calling workflow with explicit decisions (confidence gate, consistency check, escalation). It is not an autonomous LLM agent. No RAG: the "similar tickets" step is a TF-IDF nearest-neighbour lookup used as supporting evidence.</li>
+    </ul>
+    <h3>API</h3>
+    <p>Interactive docs: <a href="/docs">/docs</a>. Main endpoint: <code>POST /api/triage</code> with <code>{"text": "...", "asset_type": "wind"}</code>.</p>
+  </div>
+</section>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const sev = s => `<span class="badge sev-${esc(s)}">${esc(String(s).toUpperCase())}</span>`;
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "tab-" + b.dataset.tab));
+  if (b.dataset.tab === "queue") loadQueue();
+  if (b.dataset.tab === "eval") loadEval();
+});
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  if (!r.ok) {
+    let msg = r.status + " " + r.statusText;
+    try { const j = await r.json(); msg = typeof j.detail === "string" ? j.detail : (j.detail?.[0]?.msg || msg); } catch (e) {}
+    throw new Error(msg);
+  }
+  return r.json();
+}
+
+async function loadSamples() {
+  try {
+    const rows = await api("/api/tickets");
+    $("#samples").innerHTML = rows.map((r, i) =>
+      `<button class="sample" data-i="${i}"><b>${esc(r.ticket_id)}</b>${esc(r.description)}</button>`).join("");
+    const pick = r => { $("#text").value = r.description; $("#asset").value = r.asset_type || ""; run(r.ticket_id); };
+    document.querySelectorAll(".sample").forEach(b => b.onclick = () => pick(rows[b.dataset.i]));
+    // Deep link for demos: /?ticket=T002 runs that sample immediately.
+    const want = new URLSearchParams(location.search).get("ticket");
+    const hit = want && rows.find(r => r.ticket_id === want);
+    if (hit) pick(hit);
+  } catch (e) { $("#samples").innerHTML = `<span class="bad">Could not load samples: ${esc(e.message)}</span>`; }
+}
+
+async function run(ticketId) {
+  const text = $("#text").value.trim();
+  if (text.length < 5) { $("#result").innerHTML = `<h2>2. Triage result</h2><p class="bad">Please enter at least 5 characters.</p>`; return; }
+  $("#go").disabled = true; $("#result").innerHTML = `<h2>2. Triage result</h2><p class="muted">Running agent...</p>`;
+  try {
+    const r = await api("/api/triage", {method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({text, asset_type: $("#asset").value, ticket_id: ticketId || null})});
+    render(r);
+  } catch (e) { $("#result").innerHTML = `<h2>2. Triage result</h2><p class="bad">Error: ${esc(e.message)}</p>`; }
+  $("#go").disabled = false;
+}
+$("#go").onclick = () => run(null);
+
+function render(r) {
+  const c = r.category, s = r.severity, rt = r.routing;
+  const pct = Math.round(c.confidence * 100);
+  $("#result").innerHTML = `
+    <h2>2. Triage result ${r.ticket_id ? `<span class="muted">(${esc(r.ticket_id)})</span>` : ""}</h2>
+    <div class="badges">${sev(s.severity)}<span class="badge">${esc(rt.priority)}</span>
+      <span class="badge">${esc(c.label)}</span><span class="badge">${esc(rt.team)}</span></div>
+    ${r.needs_human_review ? `<div class="warn"><b>Needs human review:</b> ${r.review_reasons.map(esc).join("; ")}</div>` : ""}
+    <h3>Summary</h3>
+    <div class="summary">${esc(r.summary.text)}</div>
+    <div class="src">Source: ${esc(r.summary.source)}. ${esc(r.summary.note)}</div>
+    <h3>Decision details</h3>
+    <div class="kv">
+      <div>Category</div><div><code>${esc(c.id)}</code> via ${esc(c.method)}</div>
+      <div>Confidence</div><div><span class="bar"><i style="width:${pct}%"></i></span>${pct}%
+        <span class="muted">(next: ${c.top_k.slice(1).map(t => esc(t.category) + " " + Math.round(t.probability*100) + "%").join(", ")})</span></div>
+      <div>Words that drove it</div><div>${c.evidence_terms.map(esc).join(", ") || "-"}</div>
+      <div>Asset / IDs</div><div>${esc(r.input.asset_type)} ${r.entities.asset_ids.map(a => "· " + esc(a.id)).join(" ")}</div>
+      <div>SLA</div><div>respond within ${rt.sla_hours} h (by ${esc(rt.respond_by_utc)} UTC)</div>
+      <div>Escalation</div><div>${r.escalation ? "Yes: " + r.escalation.notify.map(esc).join(", ") + " (simulated)" : "No"}</div>
+    </div>
+    <h3>Why this severity</h3><ul>${s.reasons.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <h3>Probable root causes (not confirmed)</h3>
+    <ol>${r.root_cause.probable_causes.map(p => `<li>${esc(p.cause)} <span class="muted">(${p.matched_evidence.length ? "evidence: " + p.matched_evidence.map(esc).join(", ") : esc(p.support)})</span></li>`).join("")}</ol>
+    <h3>Recommended next actions</h3><ol>${rt.next_actions.map(a => `<li>${esc(a)}</li>`).join("")}</ol>
+    <h3>Similar past tickets</h3>
+    <ul>${r.similar_tickets.map(t => `<li>${esc(t.description)} <span class="muted">(${esc(t.category)}, ${esc(t.severity)}, sim ${t.similarity})</span></li>`).join("") || "<li class='muted'>none</li>"}</ul>
+    <h3>Agent trace (${r.trace.length} steps, ${r.latency_ms} ms)</h3>
+    <div class="trace">${r.trace.map(t => `<div class="step"><code>${esc(t.tool)}</code> <div class="d">${esc(t.decision)}</div>
+      <details><summary>tool output</summary><pre>${esc(JSON.stringify(t.output, null, 2))}</pre></details></div>`).join("")}</div>`;
+}
+
+let queueLoaded = false;
+async function loadQueue() {
+  if (queueLoaded) return;
+  try {
+    const rows = await api("/api/queue"); queueLoaded = true;
+    $("#queue").innerHTML = `<tr><th>#</th><th>Ticket</th><th>Severity</th><th>Priority</th><th>Category</th><th>Team</th><th>SLA</th><th>Review</th><th>Label sev.</th><th>Label cat.</th></tr>` +
+      rows.map((r, i) => `<tr><td>${i+1}</td><td><b>${esc(r.ticket_id)}</b> ${esc(r.description)}</td><td>${sev(r.severity)}</td>
+        <td>${esc(r.priority)}</td><td>${esc(r.category_label)} <span class="muted">${Math.round(r.confidence*100)}%</span></td><td>${esc(r.team)}</td>
+        <td>${r.sla_hours} h</td><td>${r.needs_human_review ? "⚠" : ""}</td>
+        <td class="${r.true_severity === r.severity ? "ok" : "bad"}">${esc(r.true_severity)}</td>
+        <td class="${r.true_category === r.category ? "ok" : "bad"}">${esc(r.true_category)}</td></tr>`).join("");
+  } catch (e) { $("#queue").innerHTML = `<tr><td class="bad">${esc(e.message)}</td></tr>`; }
+}
+
+let evalLoaded = false;
+async function loadEval() {
+  if (evalLoaded) return;
+  try {
+    const m = await api("/api/metrics"); evalLoaded = true;
+    const cv = m.category_cv, un = m.category_unseen, a = m.agent_end_to_end_holdout;
+    const fmt = v => v.accuracy_mean !== undefined ? `${v.accuracy_mean} ± ${v.accuracy_std}` : v.accuracy;
+    const fmtF = v => v.macro_f1_mean !== undefined ? `${v.macro_f1_mean} ± ${v.macro_f1_std}` : v.macro_f1;
+    const labels = a.confusion_matrix.labels;
+    $("#eval").innerHTML = `
+      <h2>Evaluation results</h2>
+      <p class="muted">Data: ${m.dataset.synthetic} synthetic tickets (${m.dataset.templates} templates), ${m.dataset.bundled} bundled, ${m.dataset.holdout_handwritten} hand-written holdout tickets that were never used for training.</p>
+      <h3>End-to-end agent on the hand-written holdout</h3>
+      <div class="kv"><div>Category accuracy</div><div><b>${a.category.accuracy}</b> (macro-F1 ${a.category.macro_f1})</div>
+      <div>Severity accuracy</div><div><b>${a.severity.accuracy}</b>, under-triage ${a.severity.under_triage_rate}, critical recall ${a.severity.critical_recall}*</div>
+      <div>Flagged for review</div><div>${a.flagged_for_review} / ${a.category.n}</div></div>
+      <p class="muted">* Severity rules were revised once after error analysis on this holdout (v1: under-triage 0.194, critical recall 0.727), so this number is optimistic.</p>
+      <h3>Category: grouped 5-fold CV (test templates never seen in training)</h3>
+      <div class="tablewrap"><table><tr><th>Model</th><th>Accuracy</th><th>Macro-F1</th></tr>
+      ${Object.entries(cv).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${fmt(v)}</td><td>${fmtF(v)}</td></tr>`).join("")}</table></div>
+      <h3>Category: unseen tickets (model trained on synthetic only)</h3>
+      <div class="tablewrap"><table><tr><th>Test set</th><th>Rules baseline acc</th><th>ML model acc</th></tr>
+      ${Object.entries(un).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${v.keyword_rules_baseline.accuracy}</td><td>${v.ml_model.accuracy}</td></tr>`).join("")}</table></div>
+      <h3>Severity</h3>
+      <div class="tablewrap"><table><tr><th>Test set</th><th>Method</th><th>Accuracy</th><th>Under-triage</th><th>Over-triage</th><th>Critical recall</th></tr>
+      ${Object.entries(m.severity).flatMap(([k, v]) => Object.entries(v).map(([mm, s]) =>
+        `<tr><td>${esc(k)}</td><td>${esc(mm)}</td><td>${s.accuracy}</td><td>${s.under_triage_rate}</td><td>${s.over_triage_rate}</td><td>${s.critical_recall}</td></tr>`)).join("")}</table></div>
+      <h3>Confusion matrix: agent on holdout (rows = true, columns = predicted)</h3>
+      <div class="tablewrap"><table class="cm"><tr><th></th>${labels.map(l => `<th>${esc(l.replace(/_/g, " "))}</th>`).join("")}</tr>
+      ${a.confusion_matrix.matrix.map((row, i) => `<tr><th>${esc(labels[i].replace(/_/g, " "))}</th>${row.map((v, j) =>
+        `<td class="${i === j ? "diag" : (v ? "off" : "")}">${v}</td>`).join("")}</tr>`).join("")}</table></div>
+      <h3>Errors</h3>
+      <ul>${a.category_errors.map(e => `<li><b>${esc(e.ticket_id)}</b> "${esc(e.description)}": true <code>${esc(e.true_category)}</code>, predicted <code>${esc(e.pred_category)}</code> (confidence ${e.confidence}, flagged for review)</li>`).join("")}
+      ${a.severity_errors.map(e => `<li><b>${esc(e.ticket_id)}</b> "${esc(e.description)}": severity true ${esc(e.true_severity)}, predicted ${esc(e.pred_severity)}</li>`).join("")}</ul>`;
+  } catch (e) { $("#eval").innerHTML = `<p class="bad">${esc(e.message)}</p>`; }
+}
+
+loadSamples();
+// Deep link for tabs: /#queue, /#eval, /#how
+const tabBtn = document.querySelector(`nav button[data-tab="${location.hash.slice(1)}"]`);
+if (tabBtn) tabBtn.click();
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+{
+  "dataset": {
+    "synthetic": 350,
+    "bundled": 6,
+    "holdout_handwritten": 36,
+    "categories": 9,
+    "templates": 70
+  },
+  "category_cv": {
+    "keyword_rules_baseline (no training)": {
+      "accuracy": 0.949,
+      "macro_f1": 0.863,
+      "n": 350
+    },
+    "tfidf_word_only + LR": {
+      "accuracy_mean": 0.575,
+      "accuracy_std": 0.092,
+      "macro_f1_mean": 0.518,
+      "macro_f1_std": 0.097,
+      "folds": 5
+    },
+    "tfidf_word+char + LR (chosen)": {
+      "accuracy_mean": 0.666,
+      "accuracy_std": 0.119,
+      "macro_f1_mean": 0.593,
+      "macro_f1_std": 0.118,
+      "folds": 5
+    }
+  },
+  "hyperparameter_C_sweep": {
+    "0.5": {
+      "accuracy_mean": 0.669,
+      "accuracy_std": 0.117,
+      "macro_f1_mean": 0.596,
+      "macro_f1_std": 0.116,
+      "folds": 5
+    },
+    "1.0": {
+      "accuracy_mean": 0.672,
+      "accuracy_std": 0.119,
+      "macro_f1_mean": 0.599,
+      "macro_f1_std": 0.117,
+      "folds": 5
+    },
+    "5.0": {
+      "accuracy_mean": 0.666,
+      "accuracy_std": 0.119,
+      "macro_f1_mean": 0.593,
+      "macro_f1_std": 0.118,
+      "folds": 5
+    },
+    "20.0": {
+      "accuracy_mean": 0.664,
+      "accuracy_std": 0.113,
+      "macro_f1_mean": 0.598,
+      "macro_f1_std": 0.108,
+      "folds": 5
+    }
+  },
+  "category_unseen": {
+    "bundled_6": {
+      "keyword_rules_baseline": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 6
+      },
+      "ml_model": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 6
+      }
+    },
+    "holdout_handwritten_36": {
+      "keyword_rules_baseline": {
+        "accuracy": 0.778,
+        "macro_f1": 0.767,
+        "n": 36
+      },
+      "ml_model": {
+        "accuracy": 0.861,
+        "macro_f1": 0.858,
+        "n": 36
+      }
+    }
+  },
+  "severity": {
+    "synthetic_350 (rules not tuned on these)": {
+      "rules_given_true_category": {
+        "accuracy": 0.911,
+        "macro_f1": 0.905,
+        "n": 350,
+        "under_triage_rate": 0.017,
+        "over_triage_rate": 0.071,
+        "within_one_level": 0.983,
+        "critical_recall": 0.989
+      }
+    },
+    "bundled_6": {
+      "rules_given_true_category": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 6,
+        "under_triage_rate": 0.0,
+        "over_triage_rate": 0.0,
+        "within_one_level": 1.0,
+        "critical_recall": 1.0
+      },
+      "ml_severity_baseline": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 6,
+        "under_triage_rate": 0.0,
+        "over_triage_rate": 0.0,
+        "within_one_level": 1.0,
+        "critical_recall": 1.0
+      }
+    },
+    "holdout_handwritten_36": {
+      "rules_given_true_category": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 36,
+        "under_triage_rate": 0.0,
+        "over_triage_rate": 0.0,
+        "within_one_level": 1.0,
+        "critical_recall": 1.0
+      },
+      "ml_severity_baseline": {
+        "accuracy": 0.806,
+        "macro_f1": 0.835,
+        "n": 36,
+        "under_triage_rate": 0.111,
+        "over_triage_rate": 0.083,
+        "within_one_level": 0.944,
+        "critical_recall": 0.727
+      }
+    }
+  },
+  "agent_end_to_end_holdout": {
+    "category": {
+      "accuracy": 0.972,
+      "macro_f1": 0.972,
+      "n": 36
+    },
+    "severity": {
+      "accuracy": 0.944,
+      "macro_f1": 0.952,
+      "n": 36,
+      "under_triage_rate": 0.0,
+      "over_triage_rate": 0.056,
+      "within_one_level": 1.0,
+      "critical_recall": 1.0
+    },
+    "flagged_for_review": 7,
+    "review_flag_precision_on_errors": 1.0,
+    "confusion_matrix": {
+      "labels": [
+        "data_gap",
+        "gearbox_vibration",
+        "grid_curtailment",
+        "inspection_compliance",
+        "inverter_thermal",
+        "module_soiling",
+        "pitch_system",
+        "safety_hazard",
+        "transformer_fault"
+      ],
+      "matrix": [
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    },
+    "category_errors": [
+      {
+        "ticket_id": "H016",
+        "description": "Weather station irradiance sensor not sending readings",
+        "true_category": "data_gap",
+        "pred_category": "inverter_thermal",
+        "confidence": 0.23
+      }
+    ],
+    "severity_errors": [
+      {
+        "ticket_id": "H003",
+        "description": "inverter 9 fans making noise, temp slightly above normal but no trip yet",
+        "true_severity": "medium",
+        "pred_severity": "high",
+        "pred_category": "inverter_thermal"
+      },
+      {
+        "ticket_id": "H016",
+        "description": "Weather station irradiance sensor not sending readings",
+        "true_severity": "medium",
+        "pred_severity": "high",
+        "pred_category": "inverter_thermal"
+      }
+    ]
+  }
+}

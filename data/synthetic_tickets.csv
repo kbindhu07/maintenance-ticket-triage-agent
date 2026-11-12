@@ -1,0 +1,351 @@
+ticket_id,asset_type,description,target_severity,target_category,template_id
+S0001,solar,"Operator note - Inverter 8 tripping repeatedly after noon, high temperature alarm vsiible pls check",high,inverter_thermal,0
+S0002,solar,"Inverter 3 trippnig repeatedly after noon, high temperature alarm visible pls check",high,inverter_thermal,0
+S0003,solar,"Operator note - Inverter 29 tripping repeatedly today, high temperature alarm visible",high,inverter_thermal,0
+S0004,solar,"Site reports: Inverter 18 tripping repeatedly during peak irradiance, high temperature alarm visible - rasied by night shift",high,inverter_thermal,0
+S0005,solar,"Control room: Inverter 3 tripping repeatedly in the afternoon, high temperature alarm visible",high,inverter_thermal,0
+S0006,solar,"Site reports: Inverter 40 in block 6 derating due to over temp, IGBT temp 86 degC",high,inverter_thermal,1
+S0007,solar,"Operator note - Inverter 15 in block 2 derating due to over temperature, IGBT temp 80 degC (repeat ticket)",high,inverter_thermal,1
+S0008,solar,"Inverter 14 in block 11 derating due to over temperature, IGBT temp 76 degC",high,inverter_thermal,1
+S0009,solar,"Control room: Inverter 18 in block 11 derating due to over temperature, IGBT temp 90 degC pls check",high,inverter_thermal,1
+S0010,solar,"URGENT: Inverter 15 in block 1 derating due to over temperature, IGBT temp 78 degC. Please advise.",high,inverter_thermal,1
+S0011,solar,"URGENT: Cooling fan of Inverter 32 not running, cabinet temp rising (repeat ticket)",high,inverter_thermal,2
+S0012,solar,"urgent: cooling fan of inverter 17 not running, cabinet temperature rising. photos attached.",high,inverter_thermal,2
+S0013,solar,"cooling fan of inverter 32 not running, cabinet temperature rising",high,inverter_thermal,2
+S0014,solar,"Cooling fan of Inverter 28 not running, cabinet temperature rising. Photos attached.",high,inverter_thermal,2
+S0015,solar,"Cooling fan of Inverter 36 not running, cabinet temperature rising",high,inverter_thermal,2
+S0016,solar,"Operator note - INV 22 shows thermal warning after noon but still generating, minor. Photos attached.",medium,inverter_thermal,3
+S0017,solar,"Inverter 17 shows thermal warning today but still generating, minor",medium,inverter_thermal,3
+S0018,solar,"Inverter 39 shows thermal warning during peak irradiance but still generating, minor - raised by night shift",medium,inverter_thermal,3
+S0019,solar,"Shift log: Inverter 34 shows thermal warning after noon but still generating, minor (repeat ticket)",medium,inverter_thermal,3
+S0020,solar,"inverter 20 shows thermal warning during peak irradiance but still generating, minor pls check",medium,inverter_thermal,3
+S0021,solar,"control room: pcu heat sink very hot, inverter 32 tripped twice after noon",high,inverter_thermal,4
+S0022,solar,"URGENT: PCU heat sink very hot, Inverter 34 tripped twice today pls check",high,inverter_thermal,4
+S0023,solar,"Shift log: PCU heat sink very hot, Inverter 20 tripped twice in the afternoon (repeat ticket)",high,inverter_thermal,4
+S0024,solar,"pcu heat sink very hot, inverter 5 tripped twice aronud 1 pm pls check",high,inverter_thermal,4
+S0025,solar,"Shift log: PCU heat sink very hot, Inverter 5 tripped twice after noon",high,inverter_thermal,4
+S0026,solar,"inv overtemp fault on inverter 35, air filter looks clogged with dust (repeat ticket)",high,inverter_thermal,5
+S0027,solar,"URGENT: inv overtemp fault on Inverter 7, air filter looks clogged with dust - raised by night shift",high,inverter_thermal,5
+S0028,solar,"inv overtemp fault on inverter 7, air filter looks clogged with dust. photos attached.",high,inverter_thermal,5
+S0029,solar,"Site reports: inv overtemp fault on Inverter 13, air filter looks clogged with dust (repeat ticket)",high,inverter_thermal,5
+S0030,solar,"FYI inv overtemp fault on Inverter 5, air filter looks clogged with dust",high,inverter_thermal,5
+S0031,solar,"Smoke and burning smell from Inverter 16 cabinet, isolated by technician. Photos attached.",critical,safety_hazard,6
+S0032,solar,"Smoke and burning smell from Inverter 4 cabinet, isolated by technician. Photos attached.",critical,safety_hazard,6
+S0033,solar,"Operator note - Smoke and burning smell from Inverter 30 cabinet, isolated by technician. Photos attached.",critical,safety_hazard,6
+S0034,solar,"Smoke and burning smell from INV 32 cabinet, isolated by technician pls check",critical,safety_hazard,6
+S0035,solar,"Smoke and burning smell from Inverter 21 cabinet, isolated by technician",critical,safety_hazard,6
+S0036,solar,Cotnrol room: All inverters in block 3 tripping on over temperature after noon,critical,inverter_thermal,7
+S0037,solar,All inverters in block 10 tripping on over temperature during peak irradiance,critical,inverter_thermal,7
+S0038,solar,Shift log: All inverters in block 5 tripping on over temp during peak irradiance pls check,critical,inverter_thermal,7
+S0039,solar,all inverters in block 6 tripping on over temperature after noon (repeat ticket),critical,inverter_thermal,7
+S0040,solar,Control room: All inverters in block 9 tripping on over temperature during peak irradiance. Please advise.,critical,inverter_thermal,7
+S0041,wind,Operator note - Gearbox vibration has increased for turbine WTG-24 with abnormal noise,critical,gearbox_vibration,8
+S0042,wind,Control room: Gearbox vibration has increased for turbine WTG-52 with abnormal noise,critical,gearbox_vibration,8
+S0043,wind,gearbox vibration has increased for turbine wtg-07 with abnormal noise. please advise.,critical,gearbox_vibration,8
+S0044,wind,Site reports: Gearbox vibration has increased for WTG WTG-19 with abnormal noise - raised by night shift,critical,gearbox_vibration,8
+S0045,wind,gearbox vibration has increased for turbine wtg-17 with abnormal noise,critical,gearbox_vibration,8
+S0046,wind,CMS alert: high speed shaft bearing vibration above warning level on WTG-22. Please advise.,high,gearbox_vibration,9
+S0047,wind,cms alert: high speed shaft bearing vibration above warning level on wtg-01,high,gearbox_vibration,9
+S0048,wind,Shift log: CMS alert: high speed shaft bearing vbiration above warning level on WTG-03,high,gearbox_vibration,9
+S0049,wind,Site reports: CMS alert: high speed shaft bearing vibration above warning level on WTG-14,high,gearbox_vibration,9
+S0050,wind,CMS alert: high speed shaft bearing vibration above warning level on WTG-40 pls check,high,gearbox_vibration,9
+S0051,wind,URGENT: WTG-57 gearbox oil temperature high and vib trending up,critical,gearbox_vibration,10
+S0052,wind,Site reports: WTG-43 gearobx oil temperature high and vibration trending up. Please advise.,critical,gearbox_vibration,10
+S0053,wind,FYI WTG-53 gearbox oil temperature high and vibration trending up - raised by night shift,critical,gearbox_vibration,10
+S0054,wind,Site reports: WTG-02 gearbox oil temperature high and vibration trending up. Photos attached.,critical,gearbox_vibration,10
+S0055,wind,Shift log: WTG-18 gearbox oil temperature high and vibration trending up. Photos attached.,critical,gearbox_vibration,10
+S0056,wind,Metal particles found in gearbox oil filter of WTG-02. Plaese advise.,critical,gearbox_vibration,11
+S0057,wind,URGENT: Metal particles found in gearbox oil filter of WTG-21,critical,gearbox_vibration,11
+S0058,wind,URGENT: Metal particles found in gearbox oil filter of WTG-46,critical,gearbox_vibration,11
+S0059,wind,Site reports: Metal particles found in gearbox oil filter of WTG-48 - raised by night shift,critical,gearbox_vibration,11
+S0060,wind,Shift log: Metal particles found in gearbox oil filter of WTG-40,critical,gearbox_vibration,11
+S0061,wind,"shift log: grinding sound from nacelle of wtg-27, drivetrain vib alarm. photos attached.",critical,gearbox_vibration,12
+S0062,wind,"URGENT: Grinding sound from nacelle of WTG-43, drivetrain vib alarm",critical,gearbox_vibration,12
+S0063,wind,"Operator note - Grinding sound from nacelle of WTG-01, drivetrain vib alarm. Please advise.",critical,gearbox_vibration,12
+S0064,wind,"FYI Grinding sound from nacelle of WTG-30, drivetrain vib alarm (repeat ticket)",critical,gearbox_vibration,12
+S0065,wind,"Grinding sound from nacelle of WTG-51, drivetrain vib alarm",critical,gearbox_vibration,12
+S0066,wind,"Site reports: Silght gearbox vibration on WTG-53 within limits, monitor at next visit. Please advise.",medium,gearbox_vibration,13
+S0067,wind,"slight gearbox vibration on wtg-40 within limits, monitor at next visit (repeat ticket)",medium,gearbox_vibration,13
+S0068,wind,"URGENT: Silght gearbox vibration on WTG-45 within limits, monitor at next visit (repeat ticket)",medium,gearbox_vibration,13
+S0069,wind,"slight gearbox vibration on wtg-15 within limits, monitor at next visit (repeat ticket)",medium,gearbox_vibration,13
+S0070,wind,"FYI Slight gearbox vibration on WTG-09 within limits, monitor at next visit - raised by night shift",medium,gearbox_vibration,13
+S0071,wind,Control room: Main bearing vibration warning on WTG-47 after restart. Photos attached.,high,gearbox_vibration,14
+S0072,wind,FYI Main bearing vibration warning on WTG-48 after restart (repeat ticket),high,gearbox_vibration,14
+S0073,wind,control room: main bearing vibration warning on wtg-50 after restart (repeat ticket),high,gearbox_vibration,14
+S0074,wind,site reports: main bearing vibration warning on wtg-19 after restart. please advise.,high,gearbox_vibration,14
+S0075,wind,site reports: main bearing vibration warning on wtg-10 after restart. photos attached.,high,gearbox_vibration,14
+S0076,wind,"Shift log: gbx vib high WTG-27, turbine stopped by controller (repeat ticket)",high,gearbox_vibration,15
+S0077,wind,"gbx vib high WTG-58, turbine stopped by controller. Photos attached.",high,gearbox_vibration,15
+S0078,wind,"URGENT: gbx vib high WTG-25, turbine stopped by controller pls check",high,gearbox_vibration,15
+S0079,wind,"Shift log: gbx vib high WTG-25, turbine stopped by controller. Photos attached.",high,gearbox_vibration,15
+S0080,wind,"Control room: gbx vib high WTG-40, turbine stopped by controller",high,gearbox_vibration,15
+S0081,hydro,URGENT: Inspection checklist pending for spillway gate 2 maintenance,medium,inspection_compliance,16
+S0082,hydro,Site reports: Inspection checklist pending for spillway gate 6 maintenance (repeat ticket),medium,inspection_compliance,16
+S0083,hydro,operator note - inspection checklist pending for spillway gate 7 maintenance,medium,inspection_compliance,16
+S0084,hydro,Site reports: Inspection checklist pending for spillway gate 6 maintenance,medium,inspection_compliance,16
+S0085,hydro,Site reports: Inspection checklist pending for spillway gate 4 maintenance,medium,inspection_compliance,16
+S0086,wind,site reports: quarterly pm checklist for wtg-08 not closed in cmms (repeat ticket),medium,inspection_compliance,17
+S0087,wind,Quatrerly PM checklist for WTG-39 not closed in CMMS,medium,inspection_compliance,17
+S0088,wind,URGENT: Quarterly PM checklist for WTG-59 not closed in CMMS. Photos attached.,medium,inspection_compliance,17
+S0089,wind,Site reports: Quarterly PM checklist for WTG-54 not closed in CMMS,medium,inspection_compliance,17
+S0090,wind,Quarterly PM checklist for WTG-52 not closed in CMMS,medium,inspection_compliance,17
+S0091,hydro,"shift log: statutory certificate for crane at pinnapuram expires next week, renewal pending",high,inspection_compliance,18
+S0092,hydro,"FYI Statutory certificate for crane at Anantapur expires next week, renewal pending",high,inspection_compliance,18
+S0093,hydro,"Control room: Statutory certificate for crane at Anantapur expires next week, renewal pending (repeat ticket)",high,inspection_compliance,18
+S0094,hydro,"Site reports: Statutory certificate for crane at Anantapur expires next week, renewal pending",high,inspection_compliance,18
+S0095,hydro,"URGENT: Statutory certificate for crane at Pinnapuram expires next week, renewal pending - raised by night shift",high,inspection_compliance,18
+S0096,solar,"Operator note - Routine visual inspection of block 6 module mounting due, no issues reported - raised by night shift",low,inspection_compliance,19
+S0097,solar,"Control room: Routine visual inspection of block 1 module mounting due, no issues reported pls check",low,inspection_compliance,19
+S0098,solar,"FYI Routine visual inpsection of block 4 module mounting due, no issues reported (repeat ticket)",low,inspection_compliance,19
+S0099,solar,"Operator note - Routine visual inspection of block 4 module mounting due, no issues reported - raised by night shift",low,inspection_compliance,19
+S0100,solar,"Control room: Routine visual inspection of block 12 module mounting due, no issues reported - raised by night shift",low,inspection_compliance,19
+S0101,grid,Fire extinguisher inspection overdue at Kurnool control room pls check,medium,inspection_compliance,20
+S0102,grid,Fire extinguisher inspection overdue at site control room pls check,medium,inspection_compliance,20
+S0103,grid,Operator note - Fire extinguisher inspection overdue at Pinnapuram control room,medium,inspection_compliance,20
+S0104,grid,Fire extinguisher inspection overdue at Anantapur control room,medium,inspection_compliance,20
+S0105,grid,FYI Fire extinguisher inspection overdue at Kurnool control room,medium,inspection_compliance,20
+S0106,hydro,Shift log: Penstock inspection report for Unit 4 awaiting sign-off,medium,inspection_compliance,21
+S0107,hydro,Penstock inspection report for Unit 1 awaiting sign-off. Photos attached.,medium,inspection_compliance,21
+S0108,hydro,Penstock inspection report for Unit 2 awaitnig sign-off. Please advise.,medium,inspection_compliance,21
+S0109,hydro,Control room: Penstock inspection report for Unit 2 awaiting sign-off. Photos attached.,medium,inspection_compliance,21
+S0110,hydro,Operator note - Penstock inspection report for Unit 4 awaiting sign-off,medium,inspection_compliance,21
+S0111,solar,site reports: audit observation: earthing pit test records missing for block 4. please advise.,medium,inspection_compliance,22
+S0112,solar,Audit observation: earthing pit test records missing for block 2,medium,inspection_compliance,22
+S0113,solar,Site reports: Audit observation: earthing pit test records missing for block 1. Please advise.,medium,inspection_compliance,22
+S0114,solar,Site reports: Audit observation: earthing pit test records missing for block 11. Please advise.,medium,inspection_compliance,22
+S0115,solar,URGENT: Audit observation: earthing pit test records missing for block 4,medium,inspection_compliance,22
+S0116,grid,"Annual compliance audit scheduled, documents to be prepared when possible",low,inspection_compliance,23
+S0117,grid,"Operator note - Annual compliance audit scheduled, documents to be prepared when possible (repeat ticket)",low,inspection_compliance,23
+S0118,grid,"Shift log: Annual compliance audit scheduled, documents to be prepared when possible. Please advise.",low,inspection_compliance,23
+S0119,grid,"annual compliance audit scheduled, documents to be prepared when possible. please advise.",low,inspection_compliance,23
+S0120,grid,"Control room: Annual compliance audit scheduled, documents to be prepared when possible (repeat ticket)",low,inspection_compliance,23
+S0121,solar,SCADA data missing for block 11 for last since morning (repeat ticket),medium,data_gap,24
+S0122,solar,URGENT: SCADA data missing for block 3 for last the last 45 minutes (repeat ticket),medium,data_gap,24
+S0123,solar,Shift log: SCADA data missing for block 8 for last two hours. Please advise.,medium,data_gap,24
+S0124,solar,Control room: SCADA data missing for block 9 for last two hours (repeat ticket),medium,data_gap,24
+S0125,solar,FYI SCADA data missing for block 8 for last overinght,medium,data_gap,24
+S0126,wind,"no data from wtg-32 on scada since two hours, turbine status unknown pls check",medium,data_gap,25
+S0127,wind,"Site reports: No data from WTG-27 on SCADA since two hours, turbnie status unknown",medium,data_gap,25
+S0128,wind,"Operator note - No data from WTG-19 on SCADA since since 6 am, turbine status unknown. Photos attached.",medium,data_gap,25
+S0129,wind,"URGENT: No data from WTG-36 on SCADA since 3 hours, turbine status unknown pls check",medium,data_gap,25
+S0130,wind,"Operator note - No data from WTG-56 on SCADA since two hours, turbine status unknown. Photos attached.",medium,data_gap,25
+S0131,solar,"Operator note - Data logger in block 1 not communicating, values frozen. Please advise.",medium,data_gap,26
+S0132,solar,"FYI Data logger in block 3 not communicating, values frozen (repeat ticket)",medium,data_gap,26
+S0133,solar,"Shift log: Data logger in block 8 not communicating, values frozen pls check",medium,data_gap,26
+S0134,solar,"Data logger in block 7 not communicating, values frozen - raised by night shift",medium,data_gap,26
+S0135,solar,"Data logger in block 7 not communicating, values frzoen (repeat ticket)",medium,data_gap,26
+S0136,solar,"FYI Comms lost to entire plant SCADA, no visibility of generation",high,data_gap,27
+S0137,solar,"URGENT: Comms lost to entire plant SCADA, no visibility of generation",high,data_gap,27
+S0138,solar,"URGENT: Comms lost to entire plant SCADA, no visibility of generation - raised by night shift",high,data_gap,27
+S0139,solar,"Control room: Comms lost to entire plant SCADA, no visibility of generation",high,data_gap,27
+S0140,solar,"operator note - comms lost to entire plant scada, no visibility of generation pls check",high,data_gap,27
+S0141,solar,Hisotrian showing flatline for Inverter 7 power tag since morning. Please advise.,medium,data_gap,28
+S0142,solar,site reports: historian showing flatline for inverter 28 power tag 3 hours. photos attached.,medium,data_gap,28
+S0143,solar,URGENT: Historian showing flatline for Inverter 6 power tag since 6 am pls check,medium,data_gap,28
+S0144,solar,Operator note - Historian showing flatline for Inverter 17 power tag since morning,medium,data_gap,28
+S0145,solar,Historian showing flatline for Inverter 35 power tag 3 hours (repeat ticket),medium,data_gap,28
+S0146,hydro,"Operator note - RTU at Unit 4 rebooting, intermittent data gap (repeat ticket)",medium,data_gap,29
+S0147,hydro,"RTU at Unit 4 rebooting, intermittent data gap pls check",medium,data_gap,29
+S0148,hydro,"RTU at Unit 3 rebooting, intermittent data gap. Photos attached.",medium,data_gap,29
+S0149,hydro,"FYI RTU at Unit 1 rebooting, intermittent data gap. Please advise.",medium,data_gap,29
+S0150,hydro,"Site reports: RTU at Unit 2 rebooting, intermittent data gap. Please advise.",medium,data_gap,29
+S0151,wind,"Network switch down, modbus timeout for WTG-54 and WTG-09",medium,data_gap,30
+S0152,wind,"Network switch down, modbus timeout for WTG-47 and WTG-09. Please advise.",medium,data_gap,30
+S0153,wind,"Shift log: Network switch down, modbus timeout for WTG-51 and WTG-35. Please advise.",medium,data_gap,30
+S0154,wind,"operator note - network switch down, modbus timeout for wtg-31 and wtg-52 - raised by night shift",medium,data_gap,30
+S0155,wind,"URGENT: Network switch down, modbus timeout for WTG-49 and WTG-15 - riased by night shift",medium,data_gap,30
+S0156,solar,"operator note - minor timestamp mismatch in daily report for block 11, informational. photos attached.",low,data_gap,31
+S0157,solar,"FYI Minor timestamp mismatch in daily report for block 4, informational",low,data_gap,31
+S0158,solar,"Site reports: Minor timestamp mismatch in daily report for block 10, informational",low,data_gap,31
+S0159,solar,"URGENT: Minor timestamp mismatch in daily report for block 11, informational",low,data_gap,31
+S0160,solar,"Site reports: Minor timestamp mismatch in daily report for block 2, informational",low,data_gap,31
+S0161,wind,Control room: Blade pitch error after high wind gust event on WTG-45. Photos attached.,high,pitch_system,32
+S0162,wind,Blade pitch error after high wind gust event on WTG-42 (repeat ticket),high,pitch_system,32
+S0163,wind,Shift log: Blade pitch error after high wind gust event on WTG-45 pls check,high,pitch_system,32
+S0164,wind,shift log: blade pitch error after high wind gust event on wtg-07 - raised by night shift,high,pitch_system,32
+S0165,wind,FYI Blade pitch error after high wind gust event on WTG-55,high,pitch_system,32
+S0166,wind,"Pitch battery voltage low on blade 2 of WTG-02, cannot feather safely - raised by night shift",critical,pitch_system,33
+S0167,wind,"Control room: Pitch battery voltage low on blade 2 of WTG-54, cannot feather safely pls check",critical,pitch_system,33
+S0168,wind,"Pitch battery voltage low on blade 2 of WTG-50, cannot feather safely",critical,pitch_system,33
+S0169,wind,"Pitch batetry voltage low on blade 2 of WTG-52, cannot feather safely",critical,pitch_system,33
+S0170,wind,"Shift log: Pitch battery voltage low on blade 2 of WTG-16, cannot faether safely",critical,pitch_system,33
+S0171,wind,"FYI Pitch motor overcurrent fault on WTG-31, trubine stopped - raised by night shift",high,pitch_system,34
+S0172,wind,"control room: pitch motor overcurrent fault on wtg-59, turbine stopped. please advise.",high,pitch_system,34
+S0173,wind,"URGENT: Pitch motor overcurrent fault on WTG-31, turbine stopped. Photos attached.",high,pitch_system,34
+S0174,wind,"Pitch motor overcurrent fault on WTG-05, turbine stopped - raised by night shift",high,pitch_system,34
+S0175,wind,"control room: pitch motor overcurrent fault on wtg-39, turbine stopped. please advise.",high,pitch_system,34
+S0176,wind,"Blade angle deviation between blade 1 and 3 on WTG-45, encoder suspected pls check",high,pitch_system,35
+S0177,wind,"FYI Blade angle deviation between blade 1 and 3 on WTG-53, encoder suspected. Phtoos attached.",high,pitch_system,35
+S0178,wind,"Blade angle deviation between blade 1 and 3 on WTG-24, encoder ssupected (repeat ticket)",high,pitch_system,35
+S0179,wind,"Blade angle deviation between blade 1 and 3 on WTG-24, encoder suspected",high,pitch_system,35
+S0180,wind,"URGENT: Blade angle deviation between blade 1 and 3 on WTG-08, encoder suspected - raised by night shift",high,pitch_system,35
+S0181,wind,Hydraulic pitch accumulator pressure low on WTG-59. Please advise.,critical,pitch_system,36
+S0182,wind,Hydraulic pitch accumulator pressure low on WTG-14 (repeat ticket),critical,pitch_system,36
+S0183,wind,Operator note - Hydraulic pitch accumulator pressure low on WTG-08 pls check,critical,pitch_system,36
+S0184,wind,Control room: Hydraulic pitch accumulator pressure low on WTG-53,critical,pitch_system,36
+S0185,wind,Hydraulic pitch accumulator pressure low on WTG-02. Please advise.,critical,pitch_system,36
+S0186,wind,"pitch converter warning on wtg-01 cleared after reset, monitor",medium,pitch_system,37
+S0187,wind,"Pitch converter warning on WTG-41 cleared after reset, monitor",medium,pitch_system,37
+S0188,wind,"Pitch converter warning on WTG-22 cleared after reset, monitor - raised by night shift",medium,pitch_system,37
+S0189,wind,"Pitch converter warning on WTG-39 cleared after reset, monitor",medium,pitch_system,37
+S0190,wind,"FYI Pitch converter warning on WTG-18 cleared after reset, monitor. Photos attached.",medium,pitch_system,37
+S0191,wind,"Control room: WTG-49 pitch system fault during storm, blades not featehring",critical,pitch_system,38
+S0192,wind,"wtg-20 pitch system fault during storm, blades not feathering pls check",critical,pitch_system,38
+S0193,wind,"site reports: wtg-20 pitch system fault during storm, blades not feathering",critical,pitch_system,38
+S0194,wind,"URGENT: WTG-32 pitch system fault during storm, blades not feathering",critical,pitch_system,38
+S0195,wind,"Shift log: WTG-54 pitch system fault during storm, blades not feathering",critical,pitch_system,38
+S0196,wind,"Pitch encoder replacement scheduled for WTG-30, routine - raised by night shift",low,pitch_system,39
+S0197,wind,"operator note - pitch encoder replacement scheduled for wtg-27, routine",low,pitch_system,39
+S0198,wind,"FYI Pitch encoder replacement scheduled for WTG-40, routnie - raised by night shift",low,pitch_system,39
+S0199,wind,"Operator note - Pitch encoder replacement scheduled for WTG-26, routine - raised by night shift",low,pitch_system,39
+S0200,wind,"Control room: Pitch encoder replacement scheduled for WTG-08, routine pls check",low,pitch_system,39
+S0201,grid,Curtailment instruction not reflected in generation dashboard pls check,medium,grid_curtailment,40
+S0202,grid,Curtailment instruction not reflected in generation dashboard,medium,grid_curtailment,40
+S0203,grid,fyi curtailment instruction not reflected in generation dashboard - raised by night shift,medium,grid_curtailment,40
+S0204,grid,Curtailment instruction not reflected in generation dashboard (repeat ticket),medium,grid_curtailment,40
+S0205,grid,Curtailment instruction not reflected in generation dashboard - raised by night shift,medium,grid_curtailment,40
+S0206,grid,"shift log: sldc backdown instruction received, ppc setpoint not applied at site a. please advise.",high,grid_curtailment,41
+S0207,grid,"Control room: SLDC backdown instruction received, PPC setpoint not applied at Pinnapuram. Photos attached.",high,grid_curtailment,41
+S0208,grid,"fyi sldc backdown instruction received, ppc setpoint not applied at site a pls check",high,grid_curtailment,41
+S0209,grid,"FYI SLDC backdown instruction received, PPC setpoint not applied at Site A",high,grid_curtailment,41
+S0210,grid,"Control room: SLDC backdown instruction received, PPC setpoint not applied at Site A",high,grid_curtailment,41
+S0211,grid,"Control room: Dispatch schedule revised, plant still exporting above limit",high,grid_curtailment,42
+S0212,grid,"shift log: dispatch schedule revised, plant still exporting above limit",high,grid_curtailment,42
+S0213,grid,"Dispatch schedule revised, plant still exporting above limit. Photos attached.",high,grid_curtailment,42
+S0214,grid,"Dispatch schedule revised, plant still exproting above limit - raised by night shift",high,grid_curtailment,42
+S0215,grid,"URGENT: Dispatch schedule revised, plant still exporting above limit",high,grid_curtailment,42
+S0216,grid,URGENT: Curtailment hours for yesterday not logged for compensation claim - raised by night shift,medium,grid_curtailment,43
+S0217,grid,Control room: Curtailment hours for yesterday not logged for compensation claim,medium,grid_curtailment,43
+S0218,grid,Shift log: Curtailment hours for yesterday not logged for compensation claim. Please advise.,medium,grid_curtailment,43
+S0219,grid,Site reports: Curtailment hours for yesterday not logged for compensation claim pls check,medium,grid_curtailment,43
+S0220,grid,Curtailment hours for yesterday not logged for compensation claim,medium,grid_curtailment,43
+S0221,solar,URGENT: Power plant controller setpoint mismatch with grid instruction at Pinnapuram,medium,grid_curtailment,44
+S0222,solar,FYI Power plant controller setpoint mismatch with grid instruction at Kurnool,medium,grid_curtailment,44
+S0223,solar,Operator note - Power plant controller setpoint mismatch with grid instruction at Jaisalmer (repeat ticket),medium,grid_curtailment,44
+S0224,solar,Site reports: Power plant controller setpoint mismatch with grid instruction at Jaisalmer - raised by night shift,medium,grid_curtailment,44
+S0225,solar,URGENT: Power plant controller setpoint mismatch with grid instruction at Anantapur. Photos attached.,medium,grid_curtailment,44
+S0226,wind,"Operator note - Wind farm curtailed by grid for 3 hours, need confirmation of instruction",medium,grid_curtailment,45
+S0227,wind,"Control room: Wind farm curtailed by grid for two hrs, need confirmation of instruction",medium,grid_curtailment,45
+S0228,wind,"Wind farm curtailed by grid for since 6 am, need confirmation of instruction. Photos attached.",medium,grid_curtailment,45
+S0229,wind,"URGENT: Wind farm curtailed by grid for two hours, need confirmation of instruction",medium,grid_curtailment,45
+S0230,wind,"Shift log: Wind farm curtailed by grid for two hours, need confirmation of instruction pls check",medium,grid_curtailment,45
+S0231,grid,"Update curtailment report format, low priority",low,grid_curtailment,46
+S0232,grid,"fyi update curtailment report format, low priority (repeat ticket)",low,grid_curtailment,46
+S0233,grid,"Site reports: Update curtailment report format, low priority",low,grid_curtailment,46
+S0234,grid,"Update curtailment report format, low priority. Plesae advise.",low,grid_curtailment,46
+S0235,grid,"fyi update curtailment report format, low priority",low,grid_curtailment,46
+S0236,grid,Site reports: Buchholz alarm on transformer T5 at pooling substation,critical,transformer_fault,47
+S0237,grid,Buchholz alarm on transformer T4 at pooling substation,critical,transformer_fault,47
+S0238,grid,Control room: Buchholz alarm on transformer T5 at pooling substation,critical,transformer_fault,47
+S0239,grid,Operator note - Bcuhholz alarm on transformer T3 at pooling substation,critical,transformer_fault,47
+S0240,grid,Shift log: Buchholz alarm on trf T6 at pooling substation,critical,transformer_fault,47
+S0241,grid,"fyi transformer t6 oil temperature high, cooling fans not starting (repeat ticket)",high,transformer_fault,48
+S0242,grid,"transformer t4 oil temperature high, cooling fans not starting. please advise.",high,transformer_fault,48
+S0243,grid,"Control room: transformer T3 oil temperature high, cooling fans not starting. Photos attached.",high,transformer_fault,48
+S0244,grid,"Site reports: transformer T6 oil temperature high, cooling fans not starting. Please advise.",high,transformer_fault,48
+S0245,grid,"Operator note - transformer T3 oil temperature high, cooling fans not starting",high,transformer_fault,48
+S0246,grid,"FYI Breaker tripped on 33 kV feeder, protection relay shows earth fault. Photos attached.",high,transformer_fault,49
+S0247,grid,"shift log: breaker tripped on 33 kv feeder, protection relay shows earth fault. please advise.",high,transformer_fault,49
+S0248,grid,"Breaker tripped on 33 kV feeder, proetction relay shows earth fault. Please advise.",high,transformer_fault,49
+S0249,grid,"urgent: breaker tripped on 33 kv feeder, protection relay shows earth fault",high,transformer_fault,49
+S0250,grid,"shift log: breaker tripped on 33 kv feeder, protection relay shows earth fault. photos attached.",high,transformer_fault,49
+S0251,grid,urgent: oil leak observed near bushing of transformer t6 - raised by night shift,high,transformer_fault,50
+S0252,grid,Oil leak observed near bushing of transformer T1 (repeat ticket),high,transformer_fault,50
+S0253,grid,URGENT: Oil leak observed near bushing of transformer T3,high,transformer_fault,50
+S0254,grid,FYI Oil leak observed near bushing of transformer T3,high,transformer_fault,50
+S0255,grid,Operator note - Oil leak obsevred near bushing of transformer T6 pls check,high,transformer_fault,50
+S0256,grid,"DGA results for transformer T5 show rising acetylene, gas trend increasing. Please advise.",critical,transformer_fault,51
+S0257,grid,"Operator note - DGA results for transformer T5 show rising acetylene, gas trend increasing (repeat ticket)",critical,transformer_fault,51
+S0258,grid,"FYI DGA results for transformer T6 show rising acetylene, gas trend increasing",critical,transformer_fault,51
+S0259,grid,"Shift log: DGA results for transformer T6 show rising acetylene, gas trend increasing",critical,transformer_fault,51
+S0260,grid,"DGA results for trasnformer T2 show rising acetylene, gas trend increasing - raised by night shift",critical,transformer_fault,51
+S0261,grid,"FYI Tap changer counter reading to be recorded, routine",low,transformer_fault,52
+S0262,grid,"Control room: Tap changer counetr reading to be recorded, routine",low,transformer_fault,52
+S0263,grid,"fyi tap changer counter reading to be recorded, routine. photos attached.",low,transformer_fault,52
+S0264,grid,"Shift log: Tap changer counter reading to be recorded, routine",low,transformer_fault,52
+S0265,grid,"Control room: Tap changer counter reading to be recorded, ruotine",low,transformer_fault,52
+S0266,solar,Inverter duty transformer in block 9 winding temperature alarm. Please advise.,high,transformer_fault,53
+S0267,solar,Operator note - Inverter duty transformer in block 9 winding temperature alarm,high,transformer_fault,53
+S0268,solar,Operator note - Inverter duty transformer in block 11 winding temperature alarm,high,transformer_fault,53
+S0269,solar,Inverter duty transformer in block 3 winding temperature alarm - raised by night shift,high,transformer_fault,53
+S0270,solar,Inverter duty transformer in block 1 winding temperature alarm,high,transformer_fault,53
+S0271,grid,"Site reports: Switchgear panel humming noise at substation, relay healthy. Phoots attached.",medium,transformer_fault,54
+S0272,grid,"Operator note - Switchgear panel humming noise at substation, relay healthy (repeat ticket)",medium,transformer_fault,54
+S0273,grid,"Switchgear panel humming noise at substation, relay healthy",medium,transformer_fault,54
+S0274,grid,"Switchgear panel humming noise at substation, relay healthy - raised by night shift",medium,transformer_fault,54
+S0275,grid,"shift log: switchgear panel humming noise at substation, relay healthy. photos attached.",medium,transformer_fault,54
+S0276,solar,"Fire reproted near Inverter 16 in block 8, area evacuated. Please advise.",critical,safety_hazard,55
+S0277,solar,"Site reports: Fire reported near Inverter 40 in block 7, area evacuated",critical,safety_hazard,55
+S0278,solar,"fyi fire reported near inverter 13 in block 3, area evacuated (repeat ticket)",critical,safety_hazard,55
+S0279,solar,"FYI Fire reported near Invetrer 26 in block 9, area evacuated pls check",critical,safety_hazard,55
+S0280,solar,"Control room: Fire reported near Inverter 31 in block 5, area evacuated",critical,safety_hazard,55
+S0281,wind,Shift log: Technician injured while climbing WTG-47 ladder. Photos attached.,critical,safety_hazard,56
+S0282,wind,Shift log: Technician injured while climbing WTG-13 ladder. Please advise.,critical,safety_hazard,56
+S0283,wind,Technician injured while climbing WTG-53 ladder,critical,safety_hazard,56
+S0284,wind,Control room: Technician injured while climbing WTG-22 ladder - raised by night shift,critical,safety_hazard,56
+S0285,wind,Technician injured while climbing WTG-33 ladder,critical,safety_hazard,56
+S0286,solar,sparking observed at cable trench near block 8 combiner box,critical,safety_hazard,57
+S0287,solar,Operator note - Sparking observed at cable trench near block 10 combiner box - raised by night shift,critical,safety_hazard,57
+S0288,solar,Operator note - Sparking observed at cable trench near block 10 combiner box (repeat ticket),critical,safety_hazard,57
+S0289,solar,Operator note - Sparking observed at cable trench near block 7 combiner box,critical,safety_hazard,57
+S0290,solar,Site reports: Sparking observed at cable trench near block 10 combiner box,critical,safety_hazard,57
+S0291,hydro,Unasfe condition: missing guard rail on gate 7 walkway pls check,critical,safety_hazard,58
+S0292,hydro,URGENT: Unsafe condition: missing guard rail on gate 3 walkway pls check,critical,safety_hazard,58
+S0293,hydro,Unsafe condition: missing guard rail on gate 1 walkway pls check,critical,safety_hazard,58
+S0294,hydro,Shift log: Unsafe condition: missing guard rail on gate 7 walkway,critical,safety_hazard,58
+S0295,hydro,FYI Unsafe condition: missing guard rail on gate 5 walkway pls check,critical,safety_hazard,58
+S0296,grid,Operator note - Smoke seen from transformer T3 cooling radiator area pls check,critical,safety_hazard,59
+S0297,grid,Operator note - Smoke seen from transformer T5 cooling radiator area. Please advise.,critical,safety_hazard,59
+S0298,grid,shift log: smoke seen from transformer t4 cooling radiator area,critical,safety_hazard,59
+S0299,grid,Operator note - Smoke seen from transformer T4 cooling radiator area (repeat ticket),critical,safety_hazard,59
+S0300,grid,Operator note - Smoke seen from transformer T6 cooling radiator area,critical,safety_hazard,59
+S0301,hydro,site reports: flood water entering powerhouse of unit 2,critical,safety_hazard,60
+S0302,hydro,Flood water entering powerhouse of Unit 2,critical,safety_hazard,60
+S0303,hydro,Site reports: Flood water entering powerhouse of Unit 4. Please advise.,critical,safety_hazard,60
+S0304,hydro,Site reports: Flood water entering powerhouse of Unit 1,critical,safety_hazard,60
+S0305,hydro,Flood water entering powerhouse of Unit 2. Photos attached.,critical,safety_hazard,60
+S0306,grid,Electric shock reported by conrtactor at Anantapur switchyard,critical,safety_hazard,61
+S0307,grid,Control room: Electric shock reported by contractor at site swithcyard (repeat ticket),critical,safety_hazard,61
+S0308,grid,Shift log: Electric shock reported by contractor at Site A switchyard,critical,safety_hazard,61
+S0309,grid,shift log: electric shock reported by contractor at site a switchyard. please advise.,critical,safety_hazard,61
+S0310,grid,URGENT: Elcetric shock reported by contractor at site switchyard. Photos attached.,critical,safety_hazard,61
+S0311,solar,"Shift log: Arc flash incident in LT panel at Jaisalmer, panel isolated pls check",critical,safety_hazard,62
+S0312,solar,"operator note - arc flash incident in lt panel at anantapur, panel isolated",critical,safety_hazard,62
+S0313,solar,"FYI Arc flash incident in LT panel at Site A, panel isolated. Please advise.",critical,safety_hazard,62
+S0314,solar,"Operator note - Arc flash incident in LT panel at site, panel isolated",critical,safety_hazard,62
+S0315,solar,"Site reports: Arc flash incident in LT panel at Kurnool, panel isolated",critical,safety_hazard,62
+S0316,solar,"URGENT: Heavy dust on modules in block 6, PR dropped by 4% (repeat ticket)",low,module_soiling,63
+S0317,solar,"Heavy dust on modules in block 4, PR dropped by 4% (repeat ticket)",low,module_soiling,63
+S0318,solar,"heavy dust on modules in block 2, pr dropepd by 4% pls check",low,module_soiling,63
+S0319,solar,"fyi heavy dust on modules in block 4, pr dropped by 4%",low,module_soiling,63
+S0320,solar,"Control room: Heavy dust on modules in block 3, PR dropped by 4%. Phoots attached.",low,module_soiling,63
+S0321,solar,"block 12 underperforming vs neighbours, soiling suspected. Photos attached.",low,module_soiling,64
+S0322,solar,"urgent: block 1 underperforming vs neighbours, soiling suspected - raised by night shift",low,module_soiling,64
+S0323,solar,"FYI block 2 underperforming vs neighbours, soiling suspected",low,module_soiling,64
+S0324,solar,"URGENT: block 12 underperforming vs neighbours, soiling suspected - raised by night shift",low,module_soiling,64
+S0325,solar,"URGENT: block 7 underperforming vs neighbours, soiling suspected",low,module_soiling,64
+S0326,solar,"shift log: bird droppings on rows 10-14 of block 11, cleaning needed",low,module_soiling,65
+S0327,solar,"Bird droppings on rows 10-14 of block 4, cleaning needed",low,module_soiling,65
+S0328,solar,"Control room: Bird droppings on rows 10-14 of block 7, cleaning needed. Photos attached.",low,module_soiling,65
+S0329,solar,"Site reports: Bird droppings on rows 10-14 of block 5, cleaning needed",low,module_soiling,65
+S0330,solar,"Site reports: Bird droppings on rows 10-14 of block 1, cleaning neeedd pls check",low,module_soiling,65
+S0331,solar,Site reports: Vegetation growth causing shading on block 1 strings,low,module_soiling,66
+S0332,solar,Vegetation growth causing shading on block 1 strings. Please advise.,low,module_soiling,66
+S0333,solar,Shift log: Vegetation growth causing shading on block 11 stirngs pls check,low,module_soiling,66
+S0334,solar,Vegetation growth causing shading on block 5 strings,low,module_soiling,66
+S0335,solar,URGENT: Vegetation growth causing shading on block 6 strings - raised by night shift,low,module_soiling,66
+S0336,solar,"Control room: Low generation from block 3 after dust storm, entire block affected (repeat ticket)",medium,module_soiling,67
+S0337,solar,"low generation from block 8 after dust storm, entire block affected. photos attached.",medium,module_soiling,67
+S0338,solar,"operator note - low generation from block 4 after dust storm, entire block affceted pls check",medium,module_soiling,67
+S0339,solar,"site reports: low generation from block 12 after dust storm, entire block affected",medium,module_soiling,67
+S0340,solar,"Site reports: Low generation from block 2 after dust storm, entire block affected pls check",medium,module_soiling,67
+S0341,solar,"Site reports: Cleaning cycle missed for block 1, performance ratio drpoping pls check",low,module_soiling,68
+S0342,solar,"Site reports: Cleaning cycle missed for block 12, performance ratio dropping. Photos attached.",low,module_soiling,68
+S0343,solar,"FYI Cleaning cycle missed for block 7, performance ratio dropping - raised by night shift",low,module_soiling,68
+S0344,solar,"Cleaning cycle missed for block 8, performance ratio dropping (repeat ticket)",low,module_soiling,68
+S0345,solar,"urgent: cleaning cycle missed for block 6, performance ratio dropping",low,module_soiling,68
+S0346,solar,"Control room: Hotspots seen in thermography on block 5 strings, possible soiling. Photos attached.",medium,module_soiling,69
+S0347,solar,"FYI Hotspots seen in thermography on block 4 strings, possible soiling - raised by night shift",medium,module_soiling,69
+S0348,solar,"fyi hotspots seen in thermography on block 12 strings, possible soiling (repeat ticket)",medium,module_soiling,69
+S0349,solar,"FYI Hotspots seen in thermography on block 9 strings, possible soiling",medium,module_soiling,69
+S0350,solar,"Cnotrol room: Hotspots seen in thermography on block 1 strings, possible soiling",medium,module_soiling,69

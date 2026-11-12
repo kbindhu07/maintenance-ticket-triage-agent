@@ -1,0 +1,37 @@
+ticket_id,description,true_category,pred_category,confidence,method,true_severity,pred_severity,needs_review
+H001,"Central inverter INV-22 keeps going into fault every day between 12 and 2, heatsink reading 85C",inverter_thermal,inverter_thermal,0.544,ml,high,high,False
+H002,PCU-3 output limited to 70% - thermal derate message on HMI,inverter_thermal,inverter_thermal,0.375,ml+rules,high,high,False
+H003,"inverter 9 fans making noise, temp slightly above normal but no trip yet",inverter_thermal,inverter_thermal,0.718,ml,medium,high,False
+H004,String inverters across the whole plant shutting down on overtemperature since 11 am,inverter_thermal,inverter_thermal,0.527,ml,critical,critical,False
+H005,WTG-33 CMS shows sideband peaks on planetary stage; noise heard from nacelle,gearbox_vibration,gearbox_vibration,0.419,ml+rules,critical,critical,False
+H006,"Turbine 18 stopped on 'gearbox bearing temp high', vibration also above warning",gearbox_vibration,gearbox_vibration,0.943,ml,critical,critical,False
+H007,Drivetrain vibration on WTG-05 slightly up compared to last month; keep under observation,gearbox_vibration,gearbox_vibration,0.674,ml,medium,medium,False
+H008,Oil sample from WTG-41 gearbox shows high iron content,gearbox_vibration,gearbox_vibration,0.698,ml,critical,critical,False
+H009,Monthly dam safety inspection for gate 2 not done this month,inspection_compliance,inspection_compliance,0.766,ml,medium,medium,False
+H010,"Thermography audit of block 7 overdue, contractor not mobilised",inspection_compliance,inspection_compliance,0.303,ml+rules,medium,medium,False
+H011,Lift certificate for WTG-12 tower elevator expired yesterday,inspection_compliance,inspection_compliance,0.229,ml+rules,high,high,True
+H012,Prepare documents for routine annual substation audit next month,inspection_compliance,inspection_compliance,0.703,ml,low,low,False
+H013,Block 2 generation values stuck at same number on the dashboard since 9 am,data_gap,data_gap,0.39,ml,medium,medium,True
+H014,Lost connection to 6 turbines on the SCADA screen; fibre cut suspected near pooling station,data_gap,data_gap,0.28,ml+rules,high,high,True
+H015,Unit 2 RTU not reporting; local panel shows machine running normally,data_gap,data_gap,0.255,ml+rules,medium,medium,True
+H016,Weather station irradiance sensor not sending readings,data_gap,inverter_thermal,0.23,ml,medium,high,True
+H017,WTG-27 stopped with blade 3 angle mismatch alarm,pitch_system,pitch_system,0.631,ml,high,high,False
+H018,Emergency pitch battery test failed on WTG-09,pitch_system,pitch_system,0.782,ml,critical,critical,False
+H019,Pitch drive fault on WTG-14 auto-reset three times tonight,pitch_system,pitch_system,0.884,ml,high,high,False
+H020,After cyclone warning turbines feathered; WTG-30 blade not reaching 90 degrees,pitch_system,pitch_system,0.707,ml,critical,critical,False
+H021,SLDC asked to reduce to 50 MW at 14:00 but plant export still at 80 MW,grid_curtailment,grid_curtailment,0.436,ml+rules,high,high,False
+H022,Backdown hours from last week missing in the monthly generation report,grid_curtailment,grid_curtailment,0.421,ml+rules,medium,medium,False
+H023,Grid desk says curtailment lifted but PPC still holding plant at 60%,grid_curtailment,grid_curtailment,0.903,ml,medium,medium,False
+H024,Dispatch revision not received from grid operator for evening slot,grid_curtailment,grid_curtailment,0.511,ml,medium,medium,False
+H025,Gas collected in Buchholz relay of 220 kV power transformer,transformer_fault,transformer_fault,0.883,ml,critical,critical,False
+H026,33 kV breaker for feeder 4 tripped on overcurrent and will not reclose,transformer_fault,transformer_fault,0.583,ml,high,high,False
+H027,IDT-5 winding temperature crossing alarm limit in afternoon,transformer_fault,transformer_fault,0.343,ml+rules,high,high,False
+H028,Oil seepage seen at transformer T3 radiator valve,transformer_fault,transformer_fault,0.619,ml,high,high,False
+H029,Cable insulation melted in combiner box and smoke coming out,safety_hazard,safety_hazard,0.762,ml,critical,critical,False
+H030,Worker slipped near spillway gate and hurt his leg,safety_hazard,safety_hazard,0.39,ml,critical,critical,True
+H031,Loose ladder bracket found inside tower of WTG-21 - unsafe to climb,safety_hazard,safety_hazard,0.303,ml+rules,critical,critical,False
+H032,Short circuit flash in switchyard during switching operation,safety_hazard,safety_hazard,0.413,ml,critical,critical,True
+H033,PR of block 6 is 3% lower than block 5 after two weeks without washing,module_soiling,module_soiling,0.555,ml,low,low,False
+H034,Thick dust layer on panels after sandstorm; plant output down noticeably,module_soiling,module_soiling,0.301,ml+rules,medium,medium,False
+H035,Grass grown tall near rows 20-25 shading bottom modules,module_soiling,module_soiling,0.447,ml+rules,low,low,False
+H036,Bird nesting on module rows creating droppings on block 11,module_soiling,module_soiling,0.836,ml,low,low,False
